@@ -75,7 +75,7 @@ app.get("/dashboard", (req, res) => {
   if (!req.session.user) {
     return res.status(401).json({ message: "Unauthorized" });
   }
-  res.json({ message: `Welcome, ${req.session.user}!` });
+  res.json({ message: `Welcome, ${req.session.user}!!!` });
 });
 
 // Logout endpoint
