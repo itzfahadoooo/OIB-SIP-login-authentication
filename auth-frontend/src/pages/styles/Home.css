@@ -1,0 +1,27 @@
+.home-container {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .home-container h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .auth-links {
+    font-size: 18px;
+  }
+  
+  .auth-links a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .auth-links a:hover {
+    color: #0056b3;
+  }
+  

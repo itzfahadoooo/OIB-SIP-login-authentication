@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./styles/Dashboard.css"; 
 
 function Dashboard() {
   const [message, setMessage] = useState("");
@@ -18,9 +19,9 @@ function Dashboard() {
   };
 
   return (
-    <div>
+    <div className="dashboard-container">
       <h2>{message}</h2>
-      <button onClick={handleLogout}>Logout</button>
+      <button className="logout-button" onClick={handleLogout}>Logout</button>
     </div>
   );
 }
