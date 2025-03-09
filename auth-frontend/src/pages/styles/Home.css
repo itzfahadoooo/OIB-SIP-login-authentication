@@ -5,12 +5,12 @@
   
   .home-container h1 {
     color: #333;
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 48px;
+    margin-bottom: 40px;
   }
   
   .auth-links {
-    font-size: 18px;
+    font-size: 38px;
   }
   
   .auth-links a {
@@ -18,10 +18,15 @@
     text-decoration: none;
     margin: 0 10px;
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .auth-links a:hover {
+    transition: 0.3s ease-in-out;
+    border-bottom: 2px solid #0056b3;
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.auth-links a:hover {
     color: #0056b3;
-  }
+    transform: translateY(-12px);
+}
   
