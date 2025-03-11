@@ -5,6 +5,7 @@ import "./styles/Dashboard.css";
 
 function Dashboard() {
   const [message, setMessage] = useState("");
+  
   const navigate = useNavigate();
 
   useEffect(() => {
