@@ -5,9 +5,18 @@ const session = require("express-session");
 const cors = require("cors");
 
 const app = express();
+
+
 const PORT = 3000;
 const usersFile = "users.json";
 
+// ✅ Allow frontend to access backend
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://oib-sip-login-authentication.onrender.com"],
+    credentials: true, // Allow cookies & authentication headers
+  })
+);
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
