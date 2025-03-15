@@ -13,8 +13,9 @@ const usersFile = "users.json";
 // ✅ Allow frontend to access backend
 app.use(
   cors({
-    origin: ["https://oib-sip-login-authentication-7gk6.vercel.app/", "https://oib-sip-login-authentication.onrender.com"],
-    credentials: true, // Allow cookies & authentication headers
+    origin: "https://oib-sip-login-authentication-7gk6.vercel.app", // Allow only your frontend
+    credentials: true, // If using cookies or authentication tokens
+    methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 // Middleware
