@@ -13,7 +13,7 @@ const usersFile = "users.json";
 // ✅ Allow frontend to access backend
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://oib-sip-login-authentication.onrender.com"],
+    origin: ["https://oib-sip-login-authentication-7gk6.vercel.app/", "https://oib-sip-login-authentication.onrender.com"],
     credentials: true, // Allow cookies & authentication headers
   })
 );
