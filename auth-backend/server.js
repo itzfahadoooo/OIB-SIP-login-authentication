@@ -1,6 +1,6 @@
 const express = require("express");
 const fs = require("fs");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const session = require("express-session");
 const cors = require("cors");
 
