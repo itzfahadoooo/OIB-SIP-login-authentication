@@ -10,7 +10,7 @@ function Dashboard() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/dashboard", { withCredentials: true })
+      .get(`${import.meta.env.VITE_API_BASE_URL}/dashboard`, { withCredentials: true })
 
       .then((response) => setMessage(response.data.message))
 
@@ -19,7 +19,7 @@ function Dashboard() {
 
   const handleLogout = async () => {
     await axios.post(
-      "http://localhost:3000/logout",
+      `${import.meta.env.VITE_API_BASE_URL}/logout`,
       {},
       { withCredentials: true }
     );
