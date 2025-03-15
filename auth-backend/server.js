@@ -28,12 +28,6 @@ app.use(
     saveUninitialized: true,
   })
 );
-app.use(
-  cors({
-    origin: "http://localhost:5173", // Adjust for your frontend
-    credentials: true,
-  })
-);
 
 // Helper function to read users
 const readUsers = () => {
