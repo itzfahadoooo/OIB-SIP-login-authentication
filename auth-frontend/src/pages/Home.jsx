@@ -7,7 +7,9 @@ function Home() {
       <h1>Welcome to Auth System</h1>
 
       <div className="auth-links">
+
         <Link to="/register">Register</Link> | <Link to="/login">Login</Link>
+        
       </div>
     </div>
   );

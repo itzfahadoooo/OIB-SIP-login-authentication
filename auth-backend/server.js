@@ -5,19 +5,9 @@ const session = require("express-session");
 const cors = require("cors");
 
 const app = express();
-
-
 const PORT = 3000;
 const usersFile = "users.json";
 
-// ✅ Allow frontend to access backend
-app.use(
-  cors({
-    origin: "https://oib-sip-login-authentication-7gk6.vercel.app", // Allow only your frontend
-    credentials: true, // If using cookies or authentication tokens
-    methods: ["GET", "POST", "PUT", "DELETE"],
-  })
-);
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -26,6 +16,12 @@ app.use(
     secret: "super_secret_key",
     resave: false,
     saveUninitialized: true,
+  })
+);
+app.use(
+  cors({
+    origin: "http://localhost:5173", // Adjust for your frontend
+    credentials: true,
   })
 );
 
