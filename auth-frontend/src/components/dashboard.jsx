@@ -4,14 +4,13 @@ import { useNavigate } from "react-router-dom";
 import "./styles/Dashboard.css";
 
 function Dashboard() {
-
   const [message, setMessage] = useState("");
 
   const navigate = useNavigate();
 
   useEffect(() => {
     axios
-      
+
       .get("http://localhost:3000/dashboard", { withCredentials: true })
 
       .then((response) => setMessage(response.data.message))
@@ -21,7 +20,6 @@ function Dashboard() {
 
   const handleLogout = async () => {
     await axios.post(
-      
       "http://localhost:3000/logout",
       {},
       { withCredentials: true }
