@@ -16,7 +16,6 @@ function Dashboard() {
       .then((response) => setMessage(response.data.message))
 
       .catch(() => navigate("/login"));
-      
   }, []);
 
   const handleLogout = async () => {
