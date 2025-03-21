@@ -14,6 +14,7 @@ function Dashboard() {
       .get("http://localhost:3000/dashboard", { withCredentials: true })
 
       .then((response) => setMessage(response.data.message))
+      
 
       .catch(() => navigate("/login"));
   }, []);
